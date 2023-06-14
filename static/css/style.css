@@ -1,0 +1,12 @@
+
+.carousel-inner,
+.carousel-item img {
+  height: 430px; /* set your desired height here */
+}
+.dropdown-menu{
+    margin-left: 2px;
+}
+
+
+ /* Set the container element to full screen size */
+ 

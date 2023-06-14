@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+<!-- {% load static %} -->
+
+{% block 'main' %}
+
+<div class="container-fluid">
+    <div class="filter fw-bold">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-4 text-decoration-underline " href="#">Apple  Watch</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+
+
+                       
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="/catfilter/5" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Sort By Price
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="/watch/0">Low To High</a></li>
+                                <li><a class="dropdown-item" href="/watch/1">High To Low </a></li>
+
+                            </ul>
+                        </li>
+                       
+
+                    </ul>
+
+
+                </div>
+
+
+
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- Iphones start -->
+<!-- <div class="row mt-3">
+    {% for x in products %}
+    <div class="col-md-3 mb-2">
+        <div class="card " style="width: 18rem;">
+            <img src="{{x.pimage}}"
+                class="card-img-top" alt="...">
+            <div class="card-body ">
+                <h5 class="card-title"><a href="#" class="text-decoration-none"><b>{{x.name}}</b></a></h5>
+                {% if x.cat == 1 %}
+                <p class="card-text ">Mobile</p>
+                {% elif x.cat == 2 %}
+                <p class="card-text ">Clothes</p>
+                {% elif x.cat == 3 %}
+                <p class="card-text ">Shoes</p>
+                {% endif %}
+
+                <p class="card-text ">{{x.price}}</p>
+                <p class="card-text">Inclusive of all taxes
+                    EMI starts at ₹6,717. No Cost EMI available </p>
+                <a href="/productlist/{{x.id}}" class="btn btn-primary">Buy Now</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div> -->
+
+<div class="row mt-2">
+    {% for x in products %}
+    <div class="col-md-3 mb-2">
+        <div class="card-fluid " style="width: 18rem;">
+            <img src="{{x.pimage.url}}"
+                class="card-img-top" height="400px" alt="...">
+            <div class="card-body ">
+                <h5 class="card-title"><a href="#" class="text-decoration-none"><b>{{x.name}}</b></a></h5>
+                {% if x.cat == 1 %}
+                <p class="card-text ">Mobile</p>
+                {% elif x.cat == 2 %}
+                <p class="card-text ">Ipads</p>
+                {% elif x.cat == 3 %}
+                <p class="card-text ">Apple Watches</p>
+                {% endif %}
+
+                <p class="card-text ">{{x.price}}</p>
+                <p class="card-text">Inclusive of all taxes
+                    EMI starts at ₹6,717. No Cost EMI available </p>
+                <a href="/productlist/{{x.id}}" class="btn btn-primary">Buy Now</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div> 
+{% endblock 'main' %}

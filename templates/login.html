@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+<!-- {% load static %} -->
+
+{% block 'main' %}
+<!-- login start -->
+<h3 class="heading   mx-auto mt-5  " style="width: 400px; ">Sign in for faster checkout.</h3>
+
+        <!-- signing page start -->
+        <div class="container mt-3 ">
+            <div class="row">
+
+                  <div class="col-md-4  mx-auto">
+                               
+                    <form action="#" method="GET">
+                            
+                        <div class="mb-3 mt-3">
+                            <label for="uname" class="form-label fw-bold">Username</label>
+                            <input type="text" class="form-control" name="uname" id="uname" placeholder="Username">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="pass" class="form-label fw-bold">Password</label>
+                            <input type="password" class="form-control" name="upass" id="pass" placeholder="Password">
+                            <button type="Submit" value="submit" id="btn" class="btn btn-sucesses text-light fw-bold " style="background-color: green;">SignIn</button>
+                            <p class="para mt-2 ms-2">You don't have <a class="text text-decoration-none " href="/register">Account /</a><a class="text text-decoration-none" href="/register">Forgot password</a></p>
+                        </div>
+
+                             
+                                    
+        
+        
+                                    
+                              
+                        
+        
+                    </form>
+
+                  </div>
+            </div>
+            
+
+
+
+        </div>
+
+    <!-- end login list -->
+    {% endblock 'main' %}
